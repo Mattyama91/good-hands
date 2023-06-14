@@ -7,6 +7,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -24,7 +25,7 @@ public class Donation {
 
     @ManyToMany
     @Column(name = "categories")
-    private List<Category> categories;
+    private List<Category> categories = new ArrayList<>();
 
     @ManyToOne
     @Column(name = "institution")
