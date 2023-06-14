@@ -26,7 +26,7 @@ public class Donation {
     @Column(name = "categories")
     private List<Category> categories;
 
-    @OneToOne
+    @ManyToOne
     @Column(name = "institution")
     private Institution institution;
 

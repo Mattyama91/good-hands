@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,4 +22,8 @@ public class Institution {
 
     @Column(name = "description")
     private String description;
+
+    @OneToMany
+    @Column(name="categories")
+    List<Category> categories;
 }
