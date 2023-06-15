@@ -1,4 +1,4 @@
-package pl.coderslab.model;
+package pl.coderslab.charity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -23,13 +23,13 @@ public class Donation {
     @Column(name = "quantity")
     private Integer quantity;
 
-    @ManyToMany
-    @Column(name = "categories")
-    private List<Category> categories = new ArrayList<>();
+//    @ManyToMany
+//    @Column(name = "categories")
+//    private List<Category> categories = new ArrayList<>();
 
-    @ManyToOne
-    @Column(name = "institution")
-    private Institution institution;
+//    @ManyToOne
+//    @Column(name = "institution")
+//    private Institution institution;
 
     @Column(name = "street")
     private String street;

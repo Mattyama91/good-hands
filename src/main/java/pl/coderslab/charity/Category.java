@@ -1,4 +1,4 @@
-package pl.coderslab.model;
+package pl.coderslab.charity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,15 +10,12 @@ import javax.persistence.*;
 @Setter
 @Entity
 @ToString
-@Table(name = "institution")
-public class Institution {
+@Table(name = "category")
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name")
     private String name;
-
-    @Column(name = "description")
-    private String description;
 }
