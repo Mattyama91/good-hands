@@ -27,7 +27,7 @@
         </div>
 
         <div class="stats--item">
-            <em>5</em>
+            <em>${donations}</em>
             <h3>Przekazanych darów</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
                 quam.</p>
@@ -91,6 +91,7 @@
                     <div class="title">${instytution.name}</div>
                     <div class="subtitle">Cel i misja: ${instytution.description}</div>
                 </div>
+
             </c:forEach>
         </ul>
     </div>
