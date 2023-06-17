@@ -87,7 +87,7 @@
     <div class="form--steps-counter">Krok <span>1</span>/4</div>
 
 <%--    <form action="form-confirmation.html" method="post">--%>
-    <form:form action="/form" method="post" modelAttribute="donation">
+    <form:form action="/summary" method="post" modelAttribute="donation">
       <!-- STEP 1: class .active is switching steps -->
       <div data-step="1" class="active">
         <h3>Zaznacz co chcesz oddać:</h3>

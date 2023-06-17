@@ -34,7 +34,7 @@ public class DonationController {
     }
 
     @ResponseBody
-    @PostMapping("form")
+    @PostMapping("summary")
     public String formAction(Donation donation){
         donationRespository.save(donation);
         return donation.toString();
