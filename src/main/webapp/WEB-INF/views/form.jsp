@@ -241,14 +241,14 @@
             <h4>Adres odbioru</h4>
             <div class="form-group form-group--inline">
               <label> Ulica
-                <input type="text" name="address" />
+<%--                <input type="text" name="address" />--%>
                 <form:input path="street" type="text"/>
               </label>
             </div>
 
             <div class="form-group form-group--inline">
               <label> Miasto
-                <input type="text" name="city" />
+<%--                <input type="text" name="city" />--%>
                 <form:input path="city" type="text"/>
               </label>
             </div>
@@ -269,11 +269,17 @@
           <div class="form-section--column">
             <h4>Termin odbioru</h4>
             <div class="form-group form-group--inline">
-              <label> Data <input type="date" name="data" /> </label>
+              <label>
+<%--                Data <input type="date" name="data" />--%>
+                Data <form:input type="date" path="pickUpDate"/>
+              </label>
             </div>
 
             <div class="form-group form-group--inline">
-              <label> Godzina <input type="time" name="time" /> </label>
+              <label>
+<%--                Godzina <input type="time" name="time" />--%>
+                Godzina <form:input type="time" path="pickUpTime" />
+              </label>
             </div>
 
             <div class="form-group form-group--inline">
@@ -301,9 +307,10 @@
             <ul>
               <li>
                 <span class="icon icon-bag"></span>
-                <span class="summary--text"
-                >4 worki ubrań w dobrym stanie dla dzieci</span
-                >
+                <span class="summary--text">
+                  ${donation.quantity} ${donation.categories}
+<%--                  4 worki ubrań w dobrym stanie dla dzieci--%>
+                </span>
               </li>
 
               <li>
