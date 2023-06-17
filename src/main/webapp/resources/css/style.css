@@ -291,6 +291,7 @@ textarea {
  */
 /* line 270, scss/vendor/_normalize.scss */
 [type="checkbox"],
+/*[type="form:checkbox"],*/
 [type="radio"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -605,12 +606,14 @@ form .form-group--checkbox input {
 }
 
 /* line 64, scss/modules/_forms.scss */
-form .form-group--checkbox input:checked + .checkbox {
+/*form .form-group--checkbox input:checked + .checkbox {*/
+.checkbox :checked {
+/*form .form-group--checkbox input:checked {*/
   background-color: #f9c910;
 }
 
 /* line 70, scss/modules/_forms.scss */
-form .form-group--checkbox .checkbox {
+form .form-group--checkbox .checkbox{
   padding: 14px;
   border: 1px solid #3c3c3c;
   display: block;
@@ -812,7 +815,7 @@ form.form--contact textarea {
 }
 
 /* line 234, scss/modules/_forms.scss */
-form.form--contact input:not([type="checkbox"]):not([type="radio"]):focus,
+form.form--contact input:not([type="checkbox"], [type="form:checkbox"]):not([type="radio"]):focus,
 form.form--contact textarea:focus {
   border-bottom: 3px solid #f9c910;
 }
