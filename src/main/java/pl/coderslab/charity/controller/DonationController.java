@@ -38,7 +38,6 @@ public class DonationController {
 //    @ResponseBody
     @PostMapping("summary")
     public String formComfirmation(@RequestParam String categoryId, Donation donation){
-//        String[] arrayCategory = categoryId.split(",");
 
         List<Category> categories = Arrays.stream(categoryId.split(","))
                 .map(c-> categoryRepository.findById(Long.parseLong(c)).orElse(null))
