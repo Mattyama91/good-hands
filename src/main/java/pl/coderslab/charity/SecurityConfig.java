@@ -15,8 +15,8 @@ public class SecurityConfig {
                 .antMatchers("/").permitAll()
                 .antMatchers("/form", "/summary").authenticated()
                 .and().formLogin()
-                .loginPage("/login")
-                .defaultSuccessUrl("/form");
+                .loginPage("/login");
+//                .defaultSuccessUrl("/form");
         return http.build();
     }
 }
