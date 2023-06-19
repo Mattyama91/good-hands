@@ -164,10 +164,18 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
+      const quantityValue = form.querySelector('input[name="quantity"]').value;
+      const categoryValue = form.querySelector('checkbox[name="categories"]').value;
+      // quantity.innerText = quantityValue + " worki " + categoryValue;
+      // console.log(quantityValue);
+      // console.log(quantity.textContent)
+
     }
 
   }
   const form = document.querySelector(".form--steps");
+  const quantity = document.querySelectorAll(".summary--text")[0];
+
   if (form !== null) {
     new FormSteps(form);
   }

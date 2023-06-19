@@ -85,8 +85,7 @@
 
   <div class="form--steps-container">
     <div class="form--steps-counter">Krok <span>1</span>/4</div>
-
-<%--    <form action="form-confirmation.html" method="post">--%>
+    <%--    <form action="form-confirmation.html" method="post">--%>
     <form:form action="/summary" method="post" modelAttribute="donation">
       <!-- STEP 1: class .active is switching steps -->
       <div data-step="1" class="active">
@@ -94,12 +93,12 @@
         <c:forEach items="${categories}" var="category">
           <div class="form-group form-group--checkbox">
             <label>
-<%--              <input--%>
-<%--                      type="checkbox"--%>
-<%--                      name="category"--%>
-<%--                      value="${category.id}"--%>
-<%--              />--%>
-              <form:checkbox path="categories" value="${category.id}"/>
+              <input
+                      type="checkbox"
+                      name="categoryId"
+                      value="${category.id}"
+              />
+<%--              <form:checkbox path="categories" value="${category.id}"/>--%>
               <span class="checkbox"></span>
               <span class="description">${category.name}</span>
             </label>
@@ -308,16 +307,16 @@
               <li>
                 <span class="icon icon-bag"></span>
                 <span class="summary--text">
-                  ${donation.quantity} ${donation.categories}
+<%--                  ${donation.quantity} ${donation.categories}--%>
 <%--                  4 worki ubrań w dobrym stanie dla dzieci--%>
                 </span>
               </li>
 
               <li>
                 <span class="icon icon-hand"></span>
-                <span class="summary--text"
-                >Dla fundacji "Mam marzenie" w Warszawie</span
-                >
+                <span class="summary--text">
+                  Dla fundacji "Mam marzenie" w Warszawie
+                </span>
               </li>
             </ul>
           </div>

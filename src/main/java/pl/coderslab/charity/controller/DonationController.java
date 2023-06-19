@@ -9,8 +9,10 @@ import pl.coderslab.charity.repository.CategoryRepository;
 import pl.coderslab.charity.repository.DonationRespository;
 import pl.coderslab.charity.repository.InstitutionRepository;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class DonationController {
@@ -33,8 +35,17 @@ public class DonationController {
         return "form";
     }
 
+//    @ResponseBody
     @PostMapping("summary")
-    public String formComfirmation(Donation donation){
+    public String formComfirmation(@RequestParam String categoryId, Donation donation){
+//        String[] arrayCategory = categoryId.split(",");
+
+        List<Category> categories = Arrays.stream(categoryId.split(","))
+                .map(c-> categoryRepository.findById(Long.parseLong(c)).orElse(null))
+                .collect(Collectors.toList());
+
+        donation.setCategories(categories);
+
         donationRespository.save(donation);
         return "formComfirmation";
     }
