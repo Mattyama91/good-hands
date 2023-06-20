@@ -7,7 +7,6 @@ import pl.coderslab.charity.repository.UserRepository;
 import pl.coderslab.charity.model.User;
 import pl.coderslab.charity.model.Role;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashSet;
 

@@ -30,3 +30,7 @@ WHERE NOT EXISTS (
     SELECT NULL
     FROM institution
 );
+
+-- Insert data to role table
+
+INSERT INTO role (id, name) VALUES (NULL, "ROLE_USER");
