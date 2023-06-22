@@ -191,11 +191,16 @@ document.addEventListener("DOMContentLoaded", function() {
       address[1].innerHTML = form.querySelector('input[name="city"]').value;
       address[2].innerHTML = form.querySelector('input[name="zipCode"]').value;
 
+      pickUpDetails[0].innerHTML = form.querySelector('input[name="pickUpDate"]').value;
+      pickUpDetails[1].innerHTML = form.querySelector('input[name="pickUpTime"]').value;
+      pickUpDetails[2].innerHTML = form.querySelector('textarea[name="pickUpComment"]').value;
+
     }
   }
   const categories = document.querySelectorAll(".summary--text")[0];
   const institution = document.querySelectorAll(".summary--text")[1];
   const address = document.querySelector(".summary").children[1].children[0].children[1].children;
+  const pickUpDetails = document.querySelector(".summary").children[1].children[1].children[1].children;
 
   const form = document.querySelector(".form--steps");
   if (form !== null) {
