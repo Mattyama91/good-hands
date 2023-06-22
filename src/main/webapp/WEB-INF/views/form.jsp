@@ -315,7 +315,7 @@
               <li>
                 <span class="icon icon-hand"></span>
                 <span class="summary--text">
-                  Dla fundacji "Mam marzenie" w Warszawie
+<%--                  Dla fundacji "Mam marzenie" w Warszawie--%>
                 </span>
               </li>
             </ul>

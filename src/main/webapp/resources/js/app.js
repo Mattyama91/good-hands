@@ -165,17 +165,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // TODO: get data from inputs and show them in summary
       const quantityValue = form.querySelector('input[name="quantity"]').value;
-      const categoryValue = form.querySelector('checkbox[name="categories"]').value;
-      // quantity.innerText = quantityValue + " worki " + categoryValue;
-      // console.log(quantityValue);
-      // console.log(quantity.textContent)
+      let categoryArr = [];
+      let bags
+
+      form.querySelectorAll('input[name="categoryId"]').forEach(input => {
+        if(input.checked) {
+          categoryArr.push(input.nextElementSibling.nextElementSibling.textContent);
+        }
+        if (quantityValue < 2) {
+          bags = " worek "
+        } else if (quantityValue < 5) {
+          bags = " worki "
+        } else {
+          bags = " worków "
+        }
+      })
+      categories.textContent = quantityValue + bags + " darów z kategorii: " + categoryArr.join(" ; ");
+
+      form.querySelectorAll('radiobutton[name="institution"]').forEach(input => {
+        if (input.checked) {
+          institution.textContent = input.nextElementSibling.nextElementSibling.firstElementChild.textContent;
+        }
+      })
+      address[0].innerHTML = form.querySelector('input[name="street"]').value;
+      address[1].innerHTML = form.querySelector('input[name="city"]').value;
+      address[2].innerHTML = form.querySelector('input[name="zipCode"]').value;
 
     }
-
   }
-  const form = document.querySelector(".form--steps");
-  const quantity = document.querySelectorAll(".summary--text")[0];
+  const categories = document.querySelectorAll(".summary--text")[0];
+  const institution = document.querySelectorAll(".summary--text")[1];
+  const address = document.querySelector(".summary").children[1].children[0].children[1].children;
 
+  const form = document.querySelector(".form--steps");
   if (form !== null) {
     new FormSteps(form);
   }
