@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
       })
       categories.textContent = quantityValue + bags + " darów z kategorii: " + categoryArr.join(" ; ");
 
-      form.querySelectorAll('radiobutton[name="institution"]').forEach(input => {
+      form.querySelectorAll('input[name="institution"]').forEach(input => {
         if (input.checked) {
           institution.textContent = input.nextElementSibling.nextElementSibling.firstElementChild.textContent;
         }
