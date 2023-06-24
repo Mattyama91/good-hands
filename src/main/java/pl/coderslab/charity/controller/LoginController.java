@@ -11,8 +11,4 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("login")
-    public String acces() {
-        return "form";
-    }
 }
