@@ -15,16 +15,21 @@ public class UserController  {
         this.userService = userService;
     }
 
-    @GetMapping("/register")
+    @GetMapping("register")
     public String register(Model model) {
         User user = new User();
         model.addAttribute("user", user);
         return "register";
     }
 
-    @PostMapping("/register")
+    @PostMapping("register")
     public String createUser(User user) {
         userService.saveUser(user);
+        return "login";
+    }
+
+    @GetMapping("login")
+    public String login() {
         return "login";
     }
 }
